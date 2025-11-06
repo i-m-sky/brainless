@@ -197,7 +197,7 @@ export default function TestEmailPage() {
               <p>
                 3. <strong>Add environment variable:</strong>{" "}
                 <code className="bg-blue-100 px-1 rounded">
-                  RESEND_API_KEY=your_api_key
+                  RESEND_API_KEY=re_HS6iqpGB_gGYKXFXrTKgALSPsGednJGPU
                 </code>
               </p>
               <p>

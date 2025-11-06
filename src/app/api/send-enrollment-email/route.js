@@ -276,9 +276,12 @@ Your Success is Our Mission!
     `;
 
     try {
+      console.log("Email==============",studentData)
       const emailResult = await sendEmail({
         to: studentData.email,
         from: "BrainEdify <noreply@brainedify.com>", // You can customize this with your verified domain
+        // to:"falcon.akashkumar@gmail.com",
+        // from: "BrainEdify <onboarding@resend.dev>",
         subject: `🎓 Welcome to BrainEdify! Enrollment Confirmation for ${studentData.student_name}`,
         html: htmlContent,
         text: textContent,
