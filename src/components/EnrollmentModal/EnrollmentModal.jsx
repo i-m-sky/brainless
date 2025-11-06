@@ -518,7 +518,7 @@ export function EnrollmentModal({
                     📱 bKash Personal Account
                   </div>
                   <div className="text-3xl font-black text-pink-800 mb-2">
-                    01538309105
+                    01814187905
                   </div>
                   <div className="text-sm text-pink-700 font-semibold">
                     Send Money to this number
@@ -554,7 +554,7 @@ export function EnrollmentModal({
                       </span>
                       <span>
                         <strong>Send ৳{totalPrice}</strong> via bKash to{" "}
-                        <strong>01538309105</strong>
+                        <strong>01814187905</strong>
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
