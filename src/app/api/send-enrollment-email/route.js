@@ -131,7 +131,7 @@ export async function POST(request) {
               <div class="payment-steps">
                 <h4 style="color: #ea580c; margin-top: 0;"><span class="emoji">📱</span> Easy bKash Payment Steps:</h4>
                 <ol style="padding-left: 20px; line-height: 1.8;">
-                  <li><strong>Send Money via bKash to:</strong> <span style="background: #fef2f2; padding: 3px 8px; border-radius: 4px; color: #dc2626; font-weight: bold;">01538309105</span></li>
+                  <li><strong>Send Money via bKash to:</strong> <span style="background: #fef2f2; padding: 3px 8px; border-radius: 4px; color: #dc2626; font-weight: bold;">01814187905</span></li>
                   <li><strong>Amount:</strong> <span style="color: #059669; font-weight: bold;">৳${studentData.amount_paid || "0"}</span></li>
                   <li><strong>Reference:</strong> Your name - ${studentData.student_name}</li>
                   <li><strong>Take screenshot</strong> of successful payment</li>
