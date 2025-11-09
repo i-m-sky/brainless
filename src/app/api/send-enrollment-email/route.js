@@ -3,7 +3,7 @@ import { sendEmail } from "@/app/api/utils/send-email";
 export async function POST(request) {
   try {
     const { studentData } = await request.json();
-
+    
     if (!studentData || !studentData.email) {
       return Response.json(
         { error: "Student data and email are required" },
@@ -196,7 +196,7 @@ export async function POST(request) {
                   <ul style="line-height: 2;">
                     <li><span class="emoji">✅</span> 500+ successful students / ৫০০+ সফল শিক্ষার্থী</li>
                     <li><span class="emoji">✅</span> 5+ years teaching experience / ৫+ বছরের অভিজ্ঞতা</li>
-                    <li><span class="emoji">✅</span> IELTS Band 7 certified instructor / আইইএলটিএস ব্যান্ড ১৭ সার্টিফাইড</li>
+                    <li><span class="emoji">✅</span> IELTS certified instructor / আইইএলটিএস ব্যান্ড ১৭ সার্টিফাইড</li>
                     <li><span class="emoji">✅</span> BUET, DU, IBA qualified teachers / বুয়েট, ঢাবি, আইবিএ শিক্ষকমণ্ডলী</li>
                     <li><span class="emoji">✅</span> Personal attention to each student / প্রতিটি শিক্ষার্থীর প্রতি ব্যক্তিগত মনোযোগ</li>
                     <li><span class="emoji">✅</span> Competitive market rates / প্রতিযোগিতামূলক বাজার দর</li>
@@ -276,7 +276,6 @@ Your Success is Our Mission!
     `;
 
     try {
-      console.log("Email==============",studentData)
       const emailResult = await sendEmail({
         to: studentData.email,
         from: "BrainEdify <noreply@brainedify.com>", // You can customize this with your verified domain

@@ -27,9 +27,12 @@ export default function TeamsPage() {
     handleSubjectChange,
     selectAllSubjects,
     clearAllSubjects,
+    onSelectEnglishCourse,
+    getSubjectsByGrade,
     handleSubmit,
     resetForm,
   } = useEnrollmentForm();
+
 
   const openForm = () => {
     setShowForm(true);
@@ -42,11 +45,13 @@ export default function TeamsPage() {
   };
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/+8801XXXXXXXXX", "_blank");
+    window.open("https://wa.me/+8801814187905", "_blank");
   };
 
+  
+
   const handleCall = () => {
-    window.open("tel:+8801XXXXXXXXX", "_blank");
+    window.open("tel:+8801814187905", "_blank");
   };
 
   return (
@@ -457,6 +462,8 @@ export default function TeamsPage() {
         onSubjectChange={handleSubjectChange}
         onSelectAllSubjects={selectAllSubjects}
         onClearAllSubjects={clearAllSubjects}
+        onSelectEnglishCourse={onSelectEnglishCourse}   // ✅ Add this
+        getSubjectsByGrade={getSubjectsByGrade}     
         onSubmit={handleSubmit}
       />
     </div>

@@ -2,11 +2,11 @@ import { ArrowRight, Phone, MessageCircle, Calendar, Mail } from "lucide-react";
 
 export function CTASection({ onEnrollClick }) {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/+8801XXXXXXXXX", "_blank");
+    window.open("https://wa.me/+8801814187905", "_blank");
   };
 
   const handleCall = () => {
-    window.open("tel:+8801XXXXXXXXX", "_blank");
+    window.open("tel:+8801814187905", "_blank");
   };
 
   const handleConsultation = () => {

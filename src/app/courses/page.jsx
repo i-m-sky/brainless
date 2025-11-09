@@ -26,6 +26,7 @@ export default function CoursesPage() {
     handleSubjectChange,
     selectAllSubjects,
     selectEnglishCourse,
+    getSubjectsByGrade,
     clearAllSubjects,
     handleSubmit,
     resetForm,
@@ -92,6 +93,7 @@ export default function CoursesPage() {
         onInputChange={handleInputChange}
         onSubjectChange={handleSubjectChange}
         onSelectAllSubjects={selectAllSubjects}
+        getSubjectsByGrade={getSubjectsByGrade}
         onSelectEnglishCourse={selectEnglishCourse}
         onClearAllSubjects={clearAllSubjects}
         onSubmit={handleSubmit}

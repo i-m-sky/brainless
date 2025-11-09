@@ -1,4 +1,5 @@
 {
-  "/api/enrollments/route": "app/api/enrollments/route.js",
-  "/api/send-enrollment-email/route": "app/api/send-enrollment-email/route.js"
+  "/teams/page": "app/teams/page.js",
+  "/page": "app/page.js",
+  "/courses/page": "app/courses/page.js"
 }

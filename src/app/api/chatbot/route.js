@@ -94,27 +94,45 @@ COMMON BANGLISH PHRASES:
 Remember: Guide students toward enrollment while providing accurate, helpful information about BrainEdify's exceptional academic programs and supportive learning environment.`;
 
     // Make request to ChatGPT with optimized settings for Vercel
-    const response = await fetch("/integrations/chat-gpt/conversationgpt4", {
+
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        model: "gpt-3.5-turbo",
         messages: [
-          {
-            role: "system",
-            content: systemPrompt,
-          },
-          {
-            role: "user",
-            content: message.trim(),
-          },
+          { role: "system", content: systemPrompt },
+          { role: "user", content: message.trim() }
         ],
-        stream: false,
-        max_tokens: 1000, // Limit for faster responses
-        temperature: 0.7, // Balanced creativity
+        temperature: 0.7,
+        max_tokens: 1000,
       }),
     });
+    
+    // const response = await fetch("http://localhost:3000/integrations/chat-gpt/conversationgpt4", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     messages: [
+    //       {
+    //         role: "system",
+    //         content: systemPrompt,
+    //       },
+    //       {
+    //         role: "user",
+    //         content: message.trim(),
+    //       },
+    //     ],
+    //     stream: false,
+    //     max_tokens: 1000, // Limit for faster responses
+    //     temperature: 0.7, // Balanced creativity
+    //   }),
+    // });
 
     if (!response.ok) {
       console.error(
@@ -134,6 +152,7 @@ Remember: Guide students toward enrollment while providing accurate, helpful inf
       }
 
       if (response.status >= 500) {
+        
         return Response.json(
           {
             error:
